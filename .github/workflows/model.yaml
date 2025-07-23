@@ -8,9 +8,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      
       - name: Set up Python
         uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # Added 3 lines
+      - uses: astral-sh/setup-uv@v5
         with:
           python-version: '3.8'
 
@@ -32,6 +37,11 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # Added 3 lines
+      - uses: astral-sh/setup-uv@v5
         with:
           python-version: '3.8'
 
